@@ -17,4 +17,4 @@ services:
     publishPath: frontend/build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://wwtp-backend.onrender.com/api/v1
+        value: https://avi-12.onrender.com/api/v1

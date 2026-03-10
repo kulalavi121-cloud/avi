@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Replace with your machine's IP address
-const BASE_URL = 'http://172.20.10.4:8000/api/v1';
+// Replace with your production URL or machine's IP address for local dev
+const BASE_URL = 'https://avi-12.onrender.com/api/v1';
 
 const apiClient = axios.create({
     baseURL: BASE_URL,
