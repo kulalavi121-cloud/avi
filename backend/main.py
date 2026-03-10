@@ -11,6 +11,7 @@ from anomaly import detect_anomalies
 from recommender import generate_recommendation
 from crud import get_data
 
+# WWTP Dashboard API - Production Deployment
 app = FastAPI(title="WWTP Dashboard API")
 
 app.add_middleware(
