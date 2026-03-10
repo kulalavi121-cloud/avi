@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
-from .database import SessionLocal
-from .models import WWTPData
+from database import SessionLocal
+from models import WWTPData
 
 async def generate_data():
     start = datetime.now() - timedelta(days=180)

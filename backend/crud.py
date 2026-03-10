@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy import func
-from .models import WWTPData
+from models import WWTPData
 
 async def get_data(db: AsyncSession, skip: int = 0, limit: int = 100):
     query = select(WWTPData).order_by(WWTPData.date.desc(), WWTPData.id.desc()).offset(skip).limit(limit)

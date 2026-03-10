@@ -1,6 +1,6 @@
 from sklearn.ensemble import IsolationForest
 import pandas as pd
-from .crud import get_all_data
+from crud import get_all_data
 
 # Global instance for the model to avoid retraining on every request
 _model = None
@@ -29,7 +29,7 @@ async def _get_or_train_model(db):
 
 async def detect_anomalies(db, limit: int = 10):
     # Fetch recent data to check for anomalies
-    from .crud import get_data
+    from crud import get_data
     paginated = await get_data(db, skip=0, limit=limit)
     data = paginated["items"]
     

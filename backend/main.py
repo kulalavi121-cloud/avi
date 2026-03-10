@@ -3,13 +3,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.ext.asyncio import AsyncSession
 import asyncio
 
-from .database import Base, engine, SessionLocal
-from .models import WWTPData
-from .schemas import PaginatedWWTPData
-from .seed_data import generate_data
-from .anomaly import detect_anomalies
-from .recommender import generate_recommendation
-from .crud import get_data
+from database import Base, engine, SessionLocal
+from models import WWTPData
+from schemas import PaginatedWWTPData
+from seed_data import generate_data
+from anomaly import detect_anomalies
+from recommender import generate_recommendation
+from crud import get_data
 
 app = FastAPI(title="WWTP Dashboard API")
 

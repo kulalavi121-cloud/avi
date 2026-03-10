@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, Float, Date
-from .database import Base
+from database import Base
 
 class WWTPData(Base):
     __tablename__ = "wwtp_data"
