@@ -1,0 +1,20 @@
+services:
+  # 1. Backend Service (FastAPI)
+  - type: web
+    name: wwtp-backend
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        value: 10000
+
+  # 2. Frontend Service (React)
+  - type: web
+    name: wwtp-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    publishPath: frontend/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://wwtp-backend.onrender.com/api/v1
